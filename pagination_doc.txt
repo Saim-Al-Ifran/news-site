@@ -1,0 +1,22 @@
+ 
+calculate total pages:-
+
+   total records = 7(could be any number)
+   limit per page = 3(could be any number)
+
+   total pages = Total Records / Limit per page
+                 7/3 = 2.33
+   total pages = ceil(Total Records / Limit per page) 
+
+============================================================================================================================================================== show different records on each page :-
+
+   SELECT * FROM table_name  LIMIT offset,limit;
+   offset = "where to start"
+   limit  = "how many records to show";
+
+===============================================================================
+Calculate offset:- 
+
+   offset = (page Number -1) * Limit;
+
+         
