@@ -113,7 +113,7 @@
                             };
 
                             if($total_page > $page){
-                                echo "<li><a href='search.php?search=".$search_term."&page= ".($page + 1)." '>next</a></li>";
+                                echo "<li><a href='search.php?search=".$search_term."&page=".($page + 1)." '>next</a></li>";
                              }
                            
                             echo "</ul>";

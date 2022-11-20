@@ -4,8 +4,6 @@ include 'config.php';
 
 
 
-
-
 if(isset($_FILES['fileToUpload'])){
        $errors = array();
 
@@ -13,9 +11,9 @@ if(isset($_FILES['fileToUpload'])){
        $file_size = $_FILES['fileToUpload']['size'];
        $file_temp = $_FILES['fileToUpload']['tmp_name'];
        $file_type = $_FILES['fileToUpload']['type'];
-        $explode   = explode('.',$file_name);
+       $explode   = explode('.',$file_name);
        $file_ext  = strtolower(end($explode));
-       $extentions= array("jpeg","jpg","png");
+       $extentions= array("jpeg","jpg","png","webp");
        
        if(in_array($file_ext,$extentions) === false){
              $errors[] = "This type of extention not allowed, Please Choose jpeg,jpg,png";
@@ -48,8 +46,6 @@ $sql = "INSERT INTO post(title,description,category,post_date,author,post_img) V
  
 
 $sql .= "UPDATE category SET post = post + 1  WHERE category_id = {$category}";
-
-
 
 
 $result = mysqli_multi_query($conn, $sql);

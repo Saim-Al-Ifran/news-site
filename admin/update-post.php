@@ -78,7 +78,7 @@
             </div>
              
             <div class="form-group">
-                <label for="">Post image</label>
+                <label for="">Post Image</label>
                 <input type="file" name="new-image">
                 <img  src="upload/<?php echo $_SESSION['post_img']?>" height="150px">
                 <input type="hidden" name="old-image" value="<?php echo $_SESSION['post_img'] ?>">
